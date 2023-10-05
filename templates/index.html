@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img width="40" height="40" src="https://img.icons8.com/cotton/64/note--v1.png" alt="note--v1"/>
+
+
+  <h3>Notes Organizer</h3>
+  <form action="/" method="post">
+    <input type="text" name="animal" placeholder="email jackson, clean room, etc." required />
+    <input type="submit" value="Organize" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
